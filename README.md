@@ -1,34 +1,14 @@
-# vue-jest-console-error-bug
+# Vue/Jest console.error bug
 
-## Project setup
-```
-npm install
-```
+This repo shows a bug in Vue where it incorrectly catches errors during Jest tests, believing that it's in a browser.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Relevant files modified
+* [HelloWorld.vue](https://github.com/chris-sorrells/vue-jest-console-error-bug/blob/master/src/components/HelloWorld.vue) - Adds a `mounted()` section which causes Vue to throw an exception.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Triggering the bug
+- Clone this repo
+- Run `npm install`
+- Run `npm run test:unit`
 
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Results
+![Alt text](readme/bug.jpg)
